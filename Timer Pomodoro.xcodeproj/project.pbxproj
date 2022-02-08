@@ -13,6 +13,11 @@
 		AF9B651727AE5D4B0008B19C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9B651527AE5D4B0008B19C /* Main.storyboard */; };
 		AF9B651927AE5D4C0008B19C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9B651827AE5D4C0008B19C /* Assets.xcassets */; };
 		AF9B651C27AE5D4C0008B19C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9B651A27AE5D4C0008B19C /* LaunchScreen.storyboard */; };
+		AF9B653127AEEA990008B19C /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF9B652C27AEEA990008B19C /* Quicksand-Bold.ttf */; };
+		AF9B653227AEEA990008B19C /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF9B652D27AEEA990008B19C /* Quicksand-SemiBold.ttf */; };
+		AF9B653327AEEA990008B19C /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF9B652E27AEEA990008B19C /* Quicksand-Medium.ttf */; };
+		AF9B653427AEEA990008B19C /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF9B652F27AEEA990008B19C /* Quicksand-Regular.ttf */; };
+		AF9B653527AEEA990008B19C /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF9B653027AEEA990008B19C /* Quicksand-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		AF9B651827AE5D4C0008B19C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF9B651B27AE5D4C0008B19C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF9B651D27AE5D4C0008B19C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF9B652C27AEEA990008B19C /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Bold.ttf"; path = "../../../../../../Downloads/Quicksand/static/Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		AF9B652D27AEEA990008B19C /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-SemiBold.ttf"; path = "../../../../../../Downloads/Quicksand/static/Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
+		AF9B652E27AEEA990008B19C /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Medium.ttf"; path = "../../../../../../Downloads/Quicksand/static/Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		AF9B652F27AEEA990008B19C /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Regular.ttf"; path = "../../../../../../Downloads/Quicksand/static/Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		AF9B653027AEEA990008B19C /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Light.ttf"; path = "../../../../../../Downloads/Quicksand/static/Quicksand-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +67,27 @@
 			isa = PBXGroup;
 			children = (
 				AF9B650F27AE5D4B0008B19C /* AppDelegate.swift */,
-				AF9B651127AE5D4B0008B19C /* SceneDelegate.swift */,
 				AF9B651327AE5D4B0008B19C /* ViewController.swift */,
+				AF9B651127AE5D4B0008B19C /* SceneDelegate.swift */,
 				AF9B651527AE5D4B0008B19C /* Main.storyboard */,
 				AF9B651827AE5D4C0008B19C /* Assets.xcassets */,
 				AF9B651A27AE5D4C0008B19C /* LaunchScreen.storyboard */,
 				AF9B651D27AE5D4C0008B19C /* Info.plist */,
+				AF9B652B27AEEA6B0008B19C /* fonts */,
 			);
 			path = "Timer Pomodoro";
+			sourceTree = "<group>";
+		};
+		AF9B652B27AEEA6B0008B19C /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AF9B652C27AEEA990008B19C /* Quicksand-Bold.ttf */,
+				AF9B653027AEEA990008B19C /* Quicksand-Light.ttf */,
+				AF9B652E27AEEA990008B19C /* Quicksand-Medium.ttf */,
+				AF9B652F27AEEA990008B19C /* Quicksand-Regular.ttf */,
+				AF9B652D27AEEA990008B19C /* Quicksand-SemiBold.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +149,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF9B651C27AE5D4C0008B19C /* LaunchScreen.storyboard in Resources */,
+				AF9B653227AEEA990008B19C /* Quicksand-SemiBold.ttf in Resources */,
+				AF9B653427AEEA990008B19C /* Quicksand-Regular.ttf in Resources */,
 				AF9B651927AE5D4C0008B19C /* Assets.xcassets in Resources */,
 				AF9B651727AE5D4B0008B19C /* Main.storyboard in Resources */,
+				AF9B653127AEEA990008B19C /* Quicksand-Bold.ttf in Resources */,
+				AF9B653327AEEA990008B19C /* Quicksand-Medium.ttf in Resources */,
+				AF9B653527AEEA990008B19C /* Quicksand-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
