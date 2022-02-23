@@ -29,6 +29,7 @@ class ViewController: UIViewController, CAAnimationDelegate {
         pomodoro.font = UIFont(name: Strings.font, size: Metric.size35)
         pomodoro.textColor = Colors.white
         pomodoro.adjustsFontSizeToFitWidth = true
+        pomodoro.textAlignment = .center
         pomodoro.doGlowAnimation(withColor: pomodoro.textColor, withEffect: .big)
 
         return pomodoro
@@ -115,50 +116,82 @@ class ViewController: UIViewController, CAAnimationDelegate {
         background.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
 
 
-        setWidthHeight(subview: centreCircleImage, width: Metric.size370, height: Metric.size370)
-        centreCircleImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        centreCircleImage.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: Constraints.constrMinus120).isActive = true
+        centreCircleImage.translatesAutoresizingMaskIntoConstraints = false
+        centreCircleImage.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
+        centreCircleImage.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -90).isActive = true
+        centreCircleImage.widthAnchor.constraint(equalTo: view.widthAnchor, constant: 1).isActive = true
+        centreCircleImage.heightAnchor.constraint(equalTo: view.widthAnchor, constant: 1).isActive = true
 
 
-        setWidthHeight(subview: startAndPauseImage, width: Metric.size100, height: Metric.size100)
+        startAndPauseImage.translatesAutoresizingMaskIntoConstraints = false
         startAndPauseImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        startAndPauseImage.topAnchor.constraint(equalTo: centreCircleImage.bottomAnchor, constant: Constraints.constr150).isActive = true
+//        startAndPauseImage.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 130).isActive = true
+//        startAndPauseImage.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -150).isActive = true
+//        startAndPauseImage.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 250).isActive = true
+        startAndPauseImage.topAnchor.constraint(equalTo: timerLabel.bottomAnchor, constant: 250).isActive = true
+        startAndPauseImage.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.3).isActive = true
+        startAndPauseImage.heightAnchor.constraint(equalTo: startAndPauseImage.widthAnchor).isActive = true
 
 
-        setWidthHeight(subview: startAndPauseButton, width: Metric.size100, height: Metric.size100)
+
+
+        startAndPauseButton.translatesAutoresizingMaskIntoConstraints = false
         startAndPauseButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        startAndPauseButton.topAnchor.constraint(equalTo: centreCircleImage.bottomAnchor, constant: Constraints.constr150).isActive = true
+//        startAndPauseButton.topAnchor.constraint(equalTo: centreCircleImage.bottomAnchor, constant: 150).isActive = true
+//        startAndPauseButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 250).isActive = true
+//        startAndPauseButton.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 130).isActive = true
+//        startAndPauseButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -150).isActive = true
+        startAndPauseButton.topAnchor.constraint(equalTo: timerLabel.bottomAnchor, constant: 250).isActive = true
+        startAndPauseButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.3).isActive = true
+        startAndPauseButton.heightAnchor.constraint(equalTo: startAndPauseImage.widthAnchor).isActive = true
 
 
-        setWidthHeight(subview: buttonAddScheduleImage, width: Metric.size100, height: Metric.size100)
+
+        buttonAddScheduleImage.translatesAutoresizingMaskIntoConstraints = false
         buttonAddScheduleImage.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: Constraints.constr10).isActive = true
         buttonAddScheduleImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: Constraints.constr5).isActive = true
+        buttonAddScheduleImage.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.24).isActive = true
+        buttonAddScheduleImage.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.24).isActive = true
 
 
-        setWidthHeight(subview: scheduleIcon, width: Metric.size100, height: Metric.size100)
+
+        scheduleIcon.translatesAutoresizingMaskIntoConstraints = false
         scheduleIcon.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: Constraints.constr8).isActive = true
         scheduleIcon.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: Constraints.constr5).isActive = true
+        scheduleIcon.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.24).isActive = true
+        scheduleIcon.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.24).isActive = true
 
 
-        setWidthHeight(subview: buttonСoncentrationImage, width: Metric.size100, height: Metric.size100)
+        buttonСoncentrationImage.translatesAutoresizingMaskIntoConstraints = false
         buttonСoncentrationImage.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: Constraints.constrMinus10).isActive = true
         buttonСoncentrationImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: Constraints.constr5).isActive = true
+        buttonСoncentrationImage.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.24).isActive = true
+        buttonСoncentrationImage.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.24).isActive = true
 
 
-        setWidthHeight(subview: concentrationIcon, width: Metric.size100, height: Metric.size100)
+        concentrationIcon.translatesAutoresizingMaskIntoConstraints = false
         concentrationIcon.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: Constraints.constrMinus12).isActive = true
         concentrationIcon.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: Constraints.constr5).isActive = true
+        concentrationIcon.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.24).isActive = true
+        concentrationIcon.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.24).isActive = true
 
 
-        setWidthHeight(subview: pomodoroLabel, width: Metric.size150, height: Metric.size60)
-        pomodoroLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: Constraints.constr70).isActive = true
-        pomodoroLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constraints.constr108).isActive = true
-        pomodoroLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: Constraints.constrMinus100).isActive = true
+        pomodoroLabel.translatesAutoresizingMaskIntoConstraints = false
+        pomodoroLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30).isActive = true
+//        pomodoroLabel.bottomAnchor.constraint(equalTo: centreCircleImage.topAnchor, constant: -30).isActive = true
+//        pomodoroLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//
+
+        pomodoroLabel.leftAnchor.constraint(equalTo: scheduleIcon.rightAnchor, constant: 10).isActive = true
+        pomodoroLabel.rightAnchor.constraint(equalTo: concentrationIcon.leftAnchor, constant: -10).isActive = true
+        pomodoroLabel.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05).isActive = true
+        pomodoroLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.4).isActive = true
+
 
 
         timerLabel.translatesAutoresizingMaskIntoConstraints = false
         timerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        timerLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: Constraints.constrMinus125).isActive = true
+        timerLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -100).isActive = true
     }
 
     //MARK: - Create methods
@@ -259,7 +292,7 @@ class ViewController: UIViewController, CAAnimationDelegate {
         let endLine = (-CGFloat.pi / 2)
         let startLine = 2 * CGFloat.pi + endLine
 
-        timeLine.path = UIBezierPath(arcCenter: CGPoint(x: view.frame.width / TimeLine.line2, y: view.frame.height / TimeLine.line2 - 120), radius: .minimum(view.frame.width / TimeLine.line4And2, view.frame.height / TimeLine.line2And5), startAngle: startLine, endAngle: endLine, clockwise: false).cgPath
+        timeLine.path = UIBezierPath(arcCenter: CGPoint(x: view.frame.width / TimeLine.line2, y: view.frame.height / TimeLine.line2 - 90), radius: .minimum(view.frame.width / TimeLine.line4And2, view.frame.height / TimeLine.line2And5), startAngle: startLine, endAngle: endLine, clockwise: false).cgPath
         timeLine.lineWidth = TimeLine.line5
         timeLine.strokeColor = Colors.orange.cgColor
         timeLine.fillColor = UIColor.clear.cgColor
@@ -404,8 +437,8 @@ extension ViewController {
 
     enum TimeLine {
         static let line2: CGFloat = 2
-        static let line2And5: CGFloat = 2.5
-        static let line4And2: CGFloat = 4.2
+        static let line2And5: CGFloat = 3.95
+        static let line4And2: CGFloat = 3.95
         static let line5: CGFloat = 5
     }
 
